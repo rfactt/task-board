@@ -1,8 +1,8 @@
 function Header() {
   return (
     <header className="header">
-      <h1>React Task Board</h1>
-      <p>Organize suas tarefas por status e prioridade.</p>
+      <h1>Organização Pessoal</h1>
+      <p>Gerencie tarefas, prioridades e progresso em um painel React.</p>
     </header>
   );
 }
