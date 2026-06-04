@@ -42,6 +42,21 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  function updateTaskTitle(taskId, newTitle) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          title: newTitle,
+        };
+      }
+
+      return task;
+    });
+
+    setTasks(updatedTasks);
+  }
+
   const filteredTasks = tasks.filter((task) => {
     const matchesStatus = filter === "todas" || task.status === filter;
     const matchesSearch = task.title
@@ -77,6 +92,7 @@ function App() {
           tasks={filteredTasks}
           onDeleteTask={deleteTask}
           onUpdateTaskStatus={updateTaskStatus}
+          onUpdateTaskTitle={updateTaskTitle}
         />
       </section>
     </main>

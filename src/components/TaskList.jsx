@@ -1,8 +1,13 @@
 import TaskCard from "./TaskCard";
 
-function TaskList({ tasks, onDeleteTask, onUpdateTaskStatus }) {
+function TaskList({
+  tasks,
+  onDeleteTask,
+  onUpdateTaskStatus,
+  onUpdateTaskTitle,
+}) {
   if (tasks.length === 0) {
-    return <p className="empty-message">Nenhuma tarefa cadastrada ainda.</p>;
+    return <p className="empty-message">Nenhuma tarefa encontrada.</p>;
   }
 
   return (
@@ -13,6 +18,7 @@ function TaskList({ tasks, onDeleteTask, onUpdateTaskStatus }) {
           task={task}
           onDeleteTask={onDeleteTask}
           onUpdateTaskStatus={onUpdateTaskStatus}
+          onUpdateTaskTitle={onUpdateTaskTitle}
         />
       ))}
     </section>

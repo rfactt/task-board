@@ -122,7 +122,7 @@ body {
 }
 
 .delete-button {
-  margin-top: 16px;
+  margin-top: 0px;
   padding: 10px 14px;
   border: none;
   border-radius: 8px;
@@ -270,4 +270,46 @@ body {
 .status-concluida {
   background: #14532d;
   color: #bbf7d0;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 16px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.edit-button,
+.save-button,
+.cancel-button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-button {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.save-button {
+  background: #22c55e;
+  color: #052e16;
+}
+
+.cancel-button {
+  background: #64748b;
+  color: #f8fafc;
 }
