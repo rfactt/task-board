@@ -26,6 +26,13 @@ function App() {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
   }
+  function clearTasks() {
+  const confirmClear = window.confirm("Tem certeza que deseja apagar todas as tarefas?");
+
+  if (confirmClear) {
+    setTasks([]);
+  }
+}
 
   function updateTaskStatus(taskId, newStatus) {
     const updatedTasks = tasks.map((task) => {
@@ -77,6 +84,12 @@ function App() {
         <TaskForm onAddTask={addTask} />
 
         <SummaryCards tasks={tasks} />
+
+        {tasks.length > 0 && (
+        <button className="clear-button" onClick={clearTasks}>
+          Limpar todas as tarefas
+        </button>
+)}
 
         <input
           className="search-input"
