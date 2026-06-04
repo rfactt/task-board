@@ -93,7 +93,7 @@ react-task-board/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/react-task-board.git
+git clone https://github.com/rfactt/task-board.git
 ```
 
 Acesse a pasta do projeto:
@@ -125,6 +125,7 @@ http://localhost:5173
 ## 🖼️ Preview
 
 <p align="center">
+  <p align="center">
   <img src="./assets/readme/preview.png" alt="Preview do projeto Organização Pessoal" width="100%">
 </p>
 ---
