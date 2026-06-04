@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -22,6 +23,8 @@ function App() {
         <div className="task-counter">
           <strong>Total de tarefas:</strong> {tasks.length}
         </div>
+
+        <TaskList tasks={tasks} />
       </section>
     </main>
   );
