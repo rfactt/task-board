@@ -188,3 +188,42 @@ body {
 .search-input::placeholder {
   color: #64748b;
 }
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.summary-card {
+  padding: 18px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.summary-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.summary-card strong {
+  font-size: 28px;
+  color: #f8fafc;
+}
+
+@media (max-width: 700px) {
+  .summary-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}

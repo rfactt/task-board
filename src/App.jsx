@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import FilterBar from "./components/FilterBar";
+import SummaryCards from "./components/SummaryCards";
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -60,9 +61,7 @@ function App() {
 
         <TaskForm onAddTask={addTask} />
 
-        <div className="task-counter">
-          <strong>Total de tarefas:</strong> {tasks.length}
-        </div>
+        <SummaryCards tasks={tasks} />
 
         <input
           className="search-input"
