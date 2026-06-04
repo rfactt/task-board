@@ -7,6 +7,7 @@ import FilterBar from "./components/FilterBar";
 function App() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("todas");
+  const [search, setSearch] = useState("");
 
   function addTask(newTask) {
     setTasks([...tasks, newTask]);
@@ -32,10 +33,14 @@ function App() {
     setTasks(updatedTasks);
   }
 
-  const filteredTasks =
-    filter === "todas"
-      ? tasks
-      : tasks.filter((task) => task.status === filter);
+  const filteredTasks = tasks.filter((task) => {
+    const matchesStatus = filter === "todas" || task.status === filter;
+    const matchesSearch = task.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    return matchesStatus && matchesSearch;
+  });
 
   return (
     <main className="app">
@@ -50,6 +55,14 @@ function App() {
         <div className="task-counter">
           <strong>Total de tarefas:</strong> {tasks.length}
         </div>
+
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Buscar tarefa..."
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
 
         <FilterBar currentFilter={filter} onChangeFilter={setFilter} />
 
