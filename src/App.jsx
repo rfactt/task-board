@@ -2,9 +2,11 @@ import { useState } from "react";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
+import FilterBar from "./components/FilterBar";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("todas");
 
   function addTask(newTask) {
     setTasks([...tasks, newTask]);
@@ -30,6 +32,11 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  const filteredTasks =
+    filter === "todas"
+      ? tasks
+      : tasks.filter((task) => task.status === filter);
+
   return (
     <main className="app">
       <Header />
@@ -44,8 +51,10 @@ function App() {
           <strong>Total de tarefas:</strong> {tasks.length}
         </div>
 
+        <FilterBar currentFilter={filter} onChangeFilter={setFilter} />
+
         <TaskList
-          tasks={tasks}
+          tasks={filteredTasks}
           onDeleteTask={deleteTask}
           onUpdateTaskStatus={updateTaskStatus}
         />

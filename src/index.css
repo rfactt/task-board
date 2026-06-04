@@ -146,3 +146,30 @@ body {
   color: #f8fafc;
   font-size: 14px;
 }
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.filter-button {
+  padding: 10px 14px;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: #1e293b;
+}
+
+.filter-button.active {
+  background: #38bdf8;
+  color: #020617;
+  border-color: #38bdf8;
+  font-weight: bold;
+}
