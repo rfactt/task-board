@@ -135,3 +135,14 @@ body {
 .delete-button:hover {
   background: #dc2626;
 }
+
+.status-select {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 14px;
+}

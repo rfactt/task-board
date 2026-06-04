@@ -15,6 +15,21 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  function updateTaskStatus(taskId, newStatus) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          status: newStatus,
+        };
+      }
+
+      return task;
+    });
+
+    setTasks(updatedTasks);
+  }
+
   return (
     <main className="app">
       <Header />
@@ -29,7 +44,11 @@ function App() {
           <strong>Total de tarefas:</strong> {tasks.length}
         </div>
 
-        <TaskList tasks={tasks} onDeleteTask={deleteTask} />
+        <TaskList
+          tasks={tasks}
+          onDeleteTask={deleteTask}
+          onUpdateTaskStatus={updateTaskStatus}
+        />
       </section>
     </main>
   );
