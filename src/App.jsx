@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import FilterBar from "./components/FilterBar";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const storedTasks = localStorage.getItem("react-task-board-tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
+
   const [filter, setFilter] = useState("todas");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("react-task-board-tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   function addTask(newTask) {
     setTasks([...tasks, newTask]);
