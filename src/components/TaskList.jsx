@@ -1,6 +1,6 @@
 import TaskCard from "./TaskCard";
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onDeleteTask }) {
   if (tasks.length === 0) {
     return <p className="empty-message">Nenhuma tarefa cadastrada ainda.</p>;
   }
@@ -8,7 +8,7 @@ function TaskList({ tasks }) {
   return (
     <section className="task-list">
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} />
+        <TaskCard key={task.id} task={task} onDeleteTask={onDeleteTask} />
       ))}
     </section>
   );

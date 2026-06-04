@@ -10,6 +10,11 @@ function App() {
     setTasks([...tasks, newTask]);
   }
 
+  function deleteTask(taskId) {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(updatedTasks);
+  }
+
   return (
     <main className="app">
       <Header />
@@ -24,7 +29,7 @@ function App() {
           <strong>Total de tarefas:</strong> {tasks.length}
         </div>
 
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} onDeleteTask={deleteTask} />
       </section>
     </main>
   );
