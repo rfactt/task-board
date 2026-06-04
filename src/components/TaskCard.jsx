@@ -1,11 +1,28 @@
 function TaskCard({ task, onDeleteTask, onUpdateTaskStatus }) {
+  function getPriorityLabel(priority) {
+    if (priority === "baixa") return "Baixa";
+    if (priority === "media") return "Média";
+    if (priority === "alta") return "Alta";
+  }
+
+  function getStatusLabel(status) {
+    if (status === "a-fazer") return "A fazer";
+    if (status === "em-andamento") return "Em andamento";
+    if (status === "concluida") return "Concluída";
+  }
+
   return (
     <article className="task-card">
       <h3>{task.title}</h3>
 
-      <div className="task-info">
-        <span>Prioridade: {task.priority}</span>
-        <span>Status: {task.status}</span>
+      <div className="task-badges">
+        <span className={`badge priority-${task.priority}`}>
+          {getPriorityLabel(task.priority)}
+        </span>
+
+        <span className={`badge status-${task.status}`}>
+          {getStatusLabel(task.status)}
+        </span>
       </div>
 
       <select
