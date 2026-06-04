@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/readme/banner2.png" alt="Banner Organização Pessoal" width="100%">
+</p>
+
 # Organização Pessoal — Quadro de tarefas em React
 
 ## 📌 Sobre o projeto
@@ -120,6 +124,9 @@ http://localhost:5173
 
 ## 🖼️ Preview
 
+<p align="center">
+  <img src="./assets/readme/preview.png" alt="Preview do projeto Organização Pessoal" width="100%">
+</p>
 ---
 
 ## 📈 Status do projeto
