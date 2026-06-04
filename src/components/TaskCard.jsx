@@ -1,21 +1,11 @@
 import { useState } from "react";
+import { getPriorityLabel, getStatusLabel } from "../utils/taskLabels";
 
 function TaskCard({ task, onDeleteTask, onUpdateTaskStatus, onUpdateTaskTitle }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(task.title);
 
-  function getPriorityLabel(priority) {
-    if (priority === "baixa") return "Baixa";
-    if (priority === "media") return "Média";
-    if (priority === "alta") return "Alta";
-  }
-
-  function getStatusLabel(status) {
-    if (status === "a-fazer") return "A fazer";
-    if (status === "em-andamento") return "Em andamento";
-    if (status === "concluida") return "Concluída";
-  }
-
+  
   function saveEdit() {
     if (editedTitle.trim() === "") {
       return;
