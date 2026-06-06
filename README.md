@@ -62,7 +62,7 @@ Durante o desenvolvimento deste projeto, foram praticados os seguintes conceitos
 
 ---
 
-## 📂 Estrutura do projeto
+## Estrutura do projeto:
 
 ```txt
 react-task-board/
@@ -88,7 +88,7 @@ react-task-board/
 
 ---
 
-## ▶️ Como executar o projeto
+## Como executar o projeto?
 
 Clone o repositório:
 
@@ -122,7 +122,7 @@ http://localhost:5173
 
 ---
 
-## 🖼️ Preview
+## 🖼️ Preview:
 
 <p align="center">
   <p align="center">
@@ -130,7 +130,7 @@ http://localhost:5173
 </p>
 ---
 
-## 📈 Status do projeto
+## 📈 Status do projeto:
 
 Projeto finalizado como parte da minha trilha de estudos em desenvolvimento web.
 
@@ -143,7 +143,7 @@ Este foi o terceiro projeto da sequência:
 
 ---
 
-## 🧠 Aprendizados
+## 🧠 Aprendizados:
 
 Este projeto foi importante para consolidar a lógica de funcionamento do React na prática.
 
@@ -151,7 +151,7 @@ O foco principal foi entender como os dados fluem entre componentes, como o esta
 
 ---
 
-## 🔮 Melhorias futuras
+## 🔮 Melhorias futuras:
 
 Algumas melhorias possíveis para versões futuras:
 
